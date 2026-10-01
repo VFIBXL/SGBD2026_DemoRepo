@@ -5,12 +5,14 @@ using DemoRepo.Models;
 
 namespace DemoRepo.Repositories
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
         IEnumerable<Product> GetAllProducts();
         int AddProduct(Product product);
         bool UpdateProduct(Product product);
         bool DeleteProduct(int productId);
         Product? GetProductById(int productId);
+
+        void ActionOnProduct(ActionEnum action);
     }
 }
