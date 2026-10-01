@@ -69,6 +69,7 @@ if (foundProduct != null)
 
     productRepository.GetAllProducts().ToList().ForEach(p => Console.WriteLine(p.ToString()));
 
+    Console.WriteLine($"C'est fini!");
 }
 else
 {
