@@ -15,7 +15,10 @@ Console.WriteLine(product.ToString());
 
 
 //IProductRepository productRepository = new FakeProductRepository();
-IProductRepository productRepository = new AdoNetProductRepository();
+//IProductRepository productRepository = new AdoNetProductRepository();
+string connectionString = "Server=(local);Database=sgbd2026;user=sa;password=Ephec+Woluwe;TrustServerCertificate=True;";
+//IProductRepository productRepository = ProductRepoFactory.CreateProductRepository(RepositoryType.Fake);
+IProductRepository productRepository = ProductRepoFactory.CreateProductRepository(RepositoryType.AdoNet, connectionString);
 
 productRepository.GetAllProducts().ToList().ForEach(p => Console.WriteLine(p.ToString()));
 
