@@ -14,7 +14,8 @@ Product product = new Product
 Console.WriteLine(product.ToString());
 
 
-IProductRepository productRepository = new FakeProductRepository();
+//IProductRepository productRepository = new FakeProductRepository();
+IProductRepository productRepository = new AdoNetProductRepository();
 
 productRepository.GetAllProducts().ToList().ForEach(p => Console.WriteLine(p.ToString()));
 
@@ -26,7 +27,7 @@ foreach (var p in products)
 }   
 
 
-Product? productById = productRepository.GetProductById(10);
+Product? productById = productRepository.GetProductById(4);
 if (productById != null)
 {
     Console.WriteLine(productById.ToString());
