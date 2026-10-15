@@ -1,0 +1,1 @@
+﻿Delete from Products where ProductId = @ProductId
