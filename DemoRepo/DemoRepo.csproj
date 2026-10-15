@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Repositories\SQL\GetProductById.sql" />
+    <EmbeddedResource Include="Repositories\SQL\GetAllProducts.sql" />
+    <EmbeddedResource Include="Repositories\SQL\DeleteProduct.sql" />
+    <EmbeddedResource Include="Repositories\SQL\AddProduct.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.12" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.24.2-preview.1" />

@@ -1,0 +1,1 @@
+﻿SELECT Id, Name, Price FROM Products WHERE Id = @Id
