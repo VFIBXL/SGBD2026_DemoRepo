@@ -1,0 +1,1 @@
+﻿INSERT INTO Products (Name, Price) OUTPUT INSERTED.Id VALUES (@Name, @Price)
